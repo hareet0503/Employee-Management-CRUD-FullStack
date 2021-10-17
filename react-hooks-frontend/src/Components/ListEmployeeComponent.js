@@ -1,4 +1,4 @@
-import React, { useState, useEffect, } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import EmployeeService from '../services/EmployeeService'
 
@@ -57,7 +57,7 @@ const ListEmployeeComponent = () => {
                                     <td> {employee.lastName} </td>
                                     <td> {employee.emailid} </td>
                                     <td>
-                                        <Link className="btn btn-info" to={'/edit-employee/${employee.id}'}>Update </Link>
+                                        <Link className="btn btn-info" to={`/edit-employee/${employee.id}`}>Update </Link>
                                         <button className="btn btn-danger" onClick={() => deleteEmployee(employee.id)}
                                             style={{ marginLeft: "10px" }}> Delete</button>
                                     </td>
